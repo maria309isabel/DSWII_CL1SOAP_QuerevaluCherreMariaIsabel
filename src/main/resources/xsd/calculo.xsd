@@ -1,0 +1,89 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+           xmlns:tns="http://www.cibertec.edu.pe/ws/objects"
+
+           targetNamespace="http://www.cibertec.edu.pe/ws/objects"
+
+           elementFormDefault="qualified">
+
+    <xs:element name="GetHoraTrabajoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="hora" type="xs:double"/>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetHoraTrabajoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="salario" type="xs:double"/>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="GetSegundosRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="segundos" type="xs:int"/>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetSegundosResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="minutos" type="xs:int"/>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetLimiteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numero" type="xs:int"/>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetLimiteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sumalimite" type="xs:int"/>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="GetPromedioRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nota1" type="xs:double"/>
+                <xs:element name="nota2" type="xs:double"/>
+                <xs:element name="nota3" type="xs:double"/>
+                <xs:element name="nota4" type="xs:double"/>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetPromedioResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="notaeliminada" type="xs:double"/>
+                <xs:element name="promedio" type="xs:double"/>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+</xs:schema>

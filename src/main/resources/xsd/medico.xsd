@@ -1,0 +1,125 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+           xmlns:tns="http://www.cibertec.edu.pe/ws/objects"
+
+           targetNamespace="http://www.cibertec.edu.pe/ws/objects"
+
+           elementFormDefault="qualified">
+
+    <!-- Find All -->
+
+    <xs:element name="getMedicosRequest">
+
+        <xs:complexType>
+
+            <xs:sequence>
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+
+
+    <xs:element name="getMedicosResponse">
+
+        <xs:complexType>
+
+            <xs:sequence>
+
+                <xs:element name="medicos" type="tns:medicows" maxOccurs="unbounded"/>
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+
+
+    <!-- Find by Id -->
+
+    <xs:element name="getMedicoRequest">
+
+        <xs:complexType>
+
+            <xs:sequence>
+
+                <xs:element name="id" type="xs:int"/>
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+    <xs:element name="getMedicoResponse">
+
+        <xs:complexType>
+
+            <xs:sequence>
+
+                <xs:element name="medico" type="tns:medicows"/>
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+
+
+    <!-- Save -->
+
+    <xs:element name="postMedicoRequest">
+
+        <xs:complexType>
+
+            <xs:sequence>
+
+                <xs:element name="medico" type="tns:medicows"/>
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+    <xs:element name="postMedicoResponse">
+
+        <xs:complexType>
+
+            <xs:sequence>
+
+                <xs:element name="medico" type="tns:medicows"/>
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+
+
+    <xs:complexType name="medicows">
+
+        <xs:sequence>
+
+            <xs:element name="IdMedico" type="xs:int"/>
+
+            <xs:element name="NomMedico" type="xs:string"/>
+
+            <xs:element name="ApeMedico" type="xs:string"/>
+
+
+            <xs:element name="FechNacMedico" type="xs:date"/>
+
+
+
+        </xs:sequence>
+
+    </xs:complexType>
+
+
+</xs:schema>
